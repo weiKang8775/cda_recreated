@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CdainterviewSite</title>
+    <title><%= get_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,6 +12,8 @@
 
   <body>
     <%= render 'layouts/navigation' %>
+    <%= render 'layouts/sidebar' %>
     <%= yield %>
+    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" %>
   </body>
 </html>
