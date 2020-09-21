@@ -1,0 +1,6 @@
+<%= form_with(model: @page, local: true) do |f| %>
+  <div>
+    <%= f.rich_text_area :text %>
+    <%= f.submit %>
+  </div>
+<% end %>

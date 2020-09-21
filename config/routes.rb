@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   root "pages#home"
   get "contact-us", to: "pages#contact"
   get "login", to: "sessions#new"
+  post "login", to: "sessions#create"
+  delete "logout", to: "sessions#destroy"
+  resources :pages, only: [:edit, :update]
 end

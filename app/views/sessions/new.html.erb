@@ -1,0 +1,14 @@
+<h1>Login</h1>
+
+<%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+  <div>
+    <%= f.label :username %>
+    <%= f.text_field :username, placeholder: "Enter your username", required: true %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password, placeholder: "Enter your password", required: true %>
+  </div>
+  <%= f.submit "Log in" %>
+  <%= link_to "Cancel", root_path %>
+<% end %>
