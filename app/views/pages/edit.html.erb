@@ -1,6 +1,9 @@
 <%= form_with(model: @page, local: true) do |f| %>
-  <div>
+  <div class="form">
     <%= f.rich_text_area :text %>
-    <%= f.submit %>
+    <div class="form__buttons">
+      <%= f.submit class: "form__submit" %>
+      <%= link_to "Cancel", root_path %>
+    </div>
   </div>
 <% end %>

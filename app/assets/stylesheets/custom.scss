@@ -1,7 +1,47 @@
+@import "variables";
 .sidebar {
   position: fixed;
   top: 20%;
   left: 90%;
-  background-color: red;
   z-index: 9999;
+  
+  &__logo {
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    background-color: #fafafa;
+    text-align: center;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .3);
+    cursor: pointer;
+    ion-icon {
+      font-size: 4rem;
+      padding-top: 1rem;
+    }
+  }
+
+  &__menu {
+    display: none;
+    padding-top: 4rem;
+    background-color: #fafafa;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .3);
+    margin-left: -4rem;
+    margin-top: -3rem;
+    .menu-items {
+      font-size: 2rem;
+      list-style: none;
+      display: inline-block;
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: $color-dark;
+      }
+      li {
+        padding: 1rem 2rem;
+        &:hover {
+          box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .5);
+          background-color: #ccc;
+        }
+      }
+    }
+  }
 }

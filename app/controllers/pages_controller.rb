@@ -1,12 +1,14 @@
 class PagesController < ApplicationController
+  before_action :require_user
   before_action :require_admin_user, only: [:edit, :update]
   before_action :set_page, only: [:edit, :update]
 
   def home
-    @page = Page.first
+    @page ||= Page.find_by(name: "home")
   end
 
   def contact
+    @page ||= Page.find_by(name: "contact_us");
   end
 
   def edit

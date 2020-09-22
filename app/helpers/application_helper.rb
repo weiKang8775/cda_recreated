@@ -11,4 +11,11 @@ module ApplicationHelper
       return "Contact Us"
     end
   end
+
+  # def get_dynamic_edit
+  #   if current_page?(root_path)
+  #     return link_to "Edit Page", edit_page_path(Page.first)
+  #   elsif current_page?(contact_us_path)
+  #     return link_to "Edit Page", edit_page_path(Page)
+
 end

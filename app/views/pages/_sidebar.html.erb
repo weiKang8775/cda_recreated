@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <div class="sidebar__logo">
+    <ion-icon name="menu-outline"></ion-icon>
+  </div>
+  <div class="sidebar__menu">
+    <ul class="menu-items">
+      <li><a href="#wp--header__textbox">Back to Top</a></li>
+      <% if logged_in? %>
+        <li><%= link_to "Logout", logout_path, method: :delete %></li>
+        <% if current_user.admin? %>
+          <li><%= link_to "Edit Page", edit_page_path(@page) %></li>
+        <% end %>
+      <% else %>
+        <li><%= link_to "Login", login_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

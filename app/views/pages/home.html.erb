@@ -1,6 +1,6 @@
-<header class="header">
-  <div class="header__textbox">CDA Interview Guide</div>
+<%= render 'sidebar' %>
+<header class="header-home" id="wp--header__textbox">
+  <div class="header-home__textbox">CDA Interview Guide</div>
 </header>
 <%= @page.text %>
-<%= link_to "Edit Page", edit_page_path(@page) %>
-<%= link_to "Login", login_path %>
+<%= render 'footer' %>
